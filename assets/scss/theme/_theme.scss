@@ -1,26 +1,24 @@
 /*=============== THEME ===============*/
-.nav__buttons{
+.nav__actions{
 	display: flex;
 	align-items: center;
 	column-gap: 1rem;
 }
 
 .change-theme{
+	color: var(--white-color);
 	font-size: 1.25rem;
-	color: var(--title-color);
 	cursor: pointer;
+	transition: color .4s;
 }
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
-	--first-color: hsl(140, 30%, 45%);
-   --first-color-alt: hsl(140, 30%, 40%);
-   --title-color: hsl(140, 4%, 90%);
-   --text-color: hsl(140, 4%, 70%);
-   --body-color: hsl(0, 0%, 10%);
-   --container-color: hsl(0, 0%, 14%);
-	--shadow-img: drop-shadow(0 8px 12px hsla(0, 0%, 0%, .6));
-	--filter-img: initial;
+   --title-color: hsl(var(--hue), 24%, 85%);
+   --text-color: hsl(var(--hue), 8%, 70%);
+   --body-color: hsl(var(--hue), 16%, 8%);
+   --container-color: hsl(var(--hue), 16%, 12%);
+   --shadow-color: hsla(var(--hue), 32%, 4%, .4);
 }
 
 /*========== 
@@ -28,20 +26,26 @@ body.dark-theme{
 	the website, in dark theme
 ==========*/
 .dark-theme{
-	& :is(.shadow-header, .nav__menu, .scrollup){
-		box-shadow: 0 2px 16px hsla(0, 0%, 0%, .3);
+	& .bg-header{
+		box-shadow: 0 12px 24px var(--shadow-color);
 	}
-	& .scrollup{
-		background-color: var(--container-color);
+
+	& .button:hover{
+		box-shadow: 0 8px 24px hsla(var(--hue), 90%, 50%, .3);
 	}
+
+	& .services__modal{
+		background-color: hsla(var(--hue), 90%, 8%, .2);
+	}
+
 	&::-webkit-scrollbar{
-		background-color: hsl(0, 0%, 15%);
-
+		background-color: hsl(var(--hue), 16%, 15%);
+		
 		&-thumb{
-			background-color: hsl(0, 0%, 30%);
-
+			background-color: hsl(var(--hue), 16%, 25%);
+			 
 			&:hover{
-				background-color: hsl(0, 0%, 40%);
+				background-color: hsl(var(--hue), 16%, 35%);
 			}
 		}
 	}

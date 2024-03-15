@@ -1,14 +1,15 @@
 /*=============== BUTTON ===============*/
 .button{
-   display: inline-block;
+   display: inline-flex;
+   justify-content: center;
    background-color: var(--first-color);
-   padding: 1rem 2rem;
-   border-radius: 4rem;
    color: var(--white-color);
    font-weight: var(--font-semi-bold);
-   transition: box-shadow .4s;
+   padding: 1rem 2rem;
+   transition: background-color .4s, box-shadow .4s;
 
    &:hover{
-      box-shadow: 0 8px 24px hsla(140, 40%, 48%, .3);
+      background-color: var(--first-color-alt);
+      box-shadow: 0 8px 24px hsla(var(--hue), 90%, 30%, .3);
    }
 }

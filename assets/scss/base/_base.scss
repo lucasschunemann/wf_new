@@ -11,27 +11,28 @@ html{
 
 body,
 input,
-button{
-	font-family: var(--body-font);
-	font-size: var(--normal-font-size);
+textarea,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
 }
 
 body{
 	background-color: var(--body-color);
 	color: var(--text-color);
-	transition: background-color .4s; // For dark mode
+	transition: background-color .4s;
 }
 
 input,
-button{
-	border: none;
-	outline: none;
+button,
+textarea {
+  border: none;
+  outline: none;
 }
 
 h1,h2,h3,h4{
 	color: var(--title-color);
-	font-weight: var(--font-medium);
-	line-height: 100%;
+	font-weight: var(--font-semi-bold);
 }
 
 ul{

@@ -1,36 +1,52 @@
 /*=============== ABOUT ===============*/
 .about{
-   position: relative;
-
-   &__container{
-      row-gap: 2rem;
+   &__page{
+      padding-bottom: 4rem;
+   }
+   &__perfil{
+      justify-self: center;
+   }
+   &__content{
+      row-gap: 4rem;
    }
    &__data{
-      position: relative;
+      row-gap: 2rem;
+   }
+   &__info{
+      row-gap: .75rem;
       text-align: center;
    }
-   &__description{
-      margin-bottom: 2rem;
+   &__name{
+      font-size: var(--h1-font-size);
    }
-   &__fruit,
-   &__branch{
-      filter: var(--filter-img);
-      position: absolute;
+   &__profession{
+      font-size: var(--h2-font-size);
    }
-   &__fruit{
-      width: 40px;
-      bottom: 2rem;
-      right: 1rem;
+   &__description b{
+      color: var(--first-color);
    }
-   &__img{
-      width: 320px;
+   &__button{
       justify-self: center;
-      filter: var(--shadow-img);
    }
-   &__branch{
-      width: 120px;
-      rotate: 60deg;
-      left: -3.5rem;
-      bottom: 15rem;
+   &__skills{
+      &-title{
+         font-size: var(--h3-font-size);
+         text-align: center;
+         margin-bottom: 2rem;
+      }
+      &-img{
+         width: 35px;
+         transition: transform .4s;
+
+         &:hover{
+            transform: translateY(-.5rem);
+         }
+      }
+      &-content{
+         grid-template-columns: repeat(5, max-content);
+         justify-content: center;
+         align-items: center;
+         gap: 2rem 1.5rem;
+      }
    }
 }
